@@ -1,0 +1,152 @@
+/* Base Styles */
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(240, 10%, 3.9%);
+  --primary: hsl(240, 5.9%, 10%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --radius: 0.5rem;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1, h2 {
+  color: var(--foreground);
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Grid Layout for Books */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Book Card Styles */
+.book-card {
+  background-color: var(--background);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+}
+
+.book-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.book-card .details {
+  padding: 1rem;
+}
+
+.book-card .details h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.book-card .details p {
+  color: gray;
+  margin-bottom: 1rem;
+}
+
+.book-card .details .price {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.book-card .details button {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.book-card .details button[disabled] {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+/* Cart Section Styles */
+.cart-section {
+  margin-top: 2rem;
+}
+
+.cart-section h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-item img {
+  width: 50px;
+  height: 70px;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.cart-item .info h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.cart-item .info p {
+  color: gray;
+}
+
+.cart-item .price {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.cart-item .remove-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.checkout-btn {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  margin-top: 1rem;
+  display: inline-block;
+}
